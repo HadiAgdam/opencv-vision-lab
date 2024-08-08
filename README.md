@@ -9,7 +9,6 @@ Welcome to the **OpenCV Projects Showcase** repository! This is a collection of 
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
 - [Contact](#contact)
 
 ## Introduction
