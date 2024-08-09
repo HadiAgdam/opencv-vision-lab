@@ -1,6 +1,6 @@
 # OpenCV Projects Showcase
 
-Welcome to the **OpenCV Projects Showcase** repository! This is a collection of computer vision projects created with [OpenCV](https://opencv.org/) by [Hadi Agdam](https://github.com/HadiAgdam) and [Real Frankenstein](https://github.com/realfrankenstein). The projects span a variety of topics in image processing and machine learning, providing practical examples for learning and development.
+Welcome to the **OpenCV Projects Showcase** repository! This is a collection of computer vision projects created with [OpenCV](https://opencv.org/) by [Hadi Agdam](https://github.com/HadiAgdam) and [Amir ligvany](https://github.com/realfrankenstein). The projects span a variety of topics in image processing and machine learning, providing practical examples for learning and development.
 
 ## Table of Contents
 
@@ -13,7 +13,7 @@ Welcome to the **OpenCV Projects Showcase** repository! This is a collection of 
 
 ## Introduction
 
-This repository is a showcase of various OpenCV projects developed by [Hadi Agdam](https://github.com/HadiAgdam) and [Real Frankenstein](https://github.com/realfrankenstein). Each project demonstrates different aspects of computer vision, ranging from basic image processing to more complex applications like object detection and face recognition.
+This repository is a showcase of various OpenCV projects developed by [Hadi Agdam](https://github.com/HadiAgdam) and [Amir ligvany](https://github.com/realfrankenstein). Each project demonstrates different aspects of computer vision, ranging from basic image processing to more complex applications like object detection and face recognition.
 
 ## Getting Started
 
