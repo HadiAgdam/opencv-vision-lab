@@ -6,7 +6,7 @@ class Gesture:
 
     def to_string(self) -> str:
         # TODO convert gesture to a string
-        pass
+        return "TEMP"
 
 
 class Command:
