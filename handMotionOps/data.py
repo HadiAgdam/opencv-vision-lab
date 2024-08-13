@@ -33,14 +33,3 @@ def save(gesture: Gesture, command: Command):
     f.write(dumps(l))
 
     f.close()
-
-
-
-
-    
-    
-
-save(
-    Gesture(None),
-    Command("echo hello")
-)

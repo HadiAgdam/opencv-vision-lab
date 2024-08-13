@@ -1,17 +1,17 @@
 # get gesture and convert it to string
 class Gesture:
     def __init__(self, hand) -> None:
-        self.finger = [False]*5
+        self.fingers = [False]*5
 
-        self.finger[0] = hand.landmark[4].x < hand.landmark[2].x
-        self.finger[1] = hand.landmark[8].y < hand.landmark[6].Y
-        self.finger[2] = hand.landmark[12].y < hand.landmark[10].Y
-        self.finger[3] = hand.landmark[16].y < hand.landmark[14].Y
-        self.finger[4] = hand.landmark[20].y < hand.landmark[18].Y
+        self.fingers[0] = hand.landmark[4].x > hand.landmark[2].x
+        self.fingers[1] = hand.landmark[8].y < hand.landmark[6].y
+        self.fingers[2] = hand.landmark[12].y < hand.landmark[10].y
+        self.fingers[3] = hand.landmark[16].y < hand.landmark[14].y
+        self.fingers[4] = hand.landmark[20].y < hand.landmark[18].y
 
     def to_string(self) -> str:
         j = ""
-        for i in self.fingr:
+        for i in self.fingrs:
             if i:
                 j += '1'
             else:
