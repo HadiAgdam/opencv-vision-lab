@@ -37,6 +37,7 @@ def save(gesture: Gesture, command: Command):
     f.close()
 
 
+# we run the function ti save the data
 save(
     Gesture(None),
     Command("echo hello")
