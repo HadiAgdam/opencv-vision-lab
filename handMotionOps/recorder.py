@@ -14,7 +14,7 @@ from math import sqrt
 
 print("Welcome to HandMotionOps.")
 
-# command = Command(input("enter commnad :"))
+command = Command(input("enter commnad :"))
 
 print("Show gesture to camera with your right hand, hold it for 3 seconds to save ...")
 
@@ -29,7 +29,7 @@ gesture: Gesture = None
 start_time: float = None
 
 def end():
-    # save(g, command)
+    save(g, command)
     print("saved successfully")
     cv2.destroyAllWindows()
     exit()

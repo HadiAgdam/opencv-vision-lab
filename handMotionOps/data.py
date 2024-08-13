@@ -5,40 +5,18 @@ from json import dumps, loads
 
 
 def save(gesture: Gesture, command: Command):
-    # open json file thta we save our data in it
-    # TODO ask Hadi
-    f = open("./data/data.json")
-    # deserialize a JSON string into a Python object and read it
-    l = loads(f.read())
-    # check if gesture is already added
-    for i in l:
-        g = get_gesture(i["gesture"])
-        c = Command(i["command"])
+    # ./ is incorrenct. If you want to get a file from upper directory, you should use ../
 
-        if g == gesture and c == command:
-            return
+    # open json file that we save our data in it
 
-        if g == gesture and c != command:
-            l.pop({
-                "gesture": gesture.to_string(),
-                "command": command.text
-            })
-    # Add the new command and gesture to the file
-    l.append({
+    with open("data/data.json", 'r') as f:
+        data_list = loads(f.read)
+
+    data_list = [item for item in data_list if not (get_gesture(item["gesture"]) == gesture and Command(item["command"]) != command)]
+
+    data_list.append({
         "gesture": gesture.to_string(),
-        "command": command.text
     })
 
-    f = open(
-        "/Users/hadi/pythonProjects/opencv-vision-lab/handMotionOps/data/data.json", "w+")
-    # serialize the Python object to a JSON formatted string
-    f.write(dumps(l))
-
-    f.close()
-
-
-# we run the function ti save the data
-save(
-    Gesture(None),
-    Command("echo hello")
-)
+    with open("data/data.json", "w") as f:
+        dumps(data_list, f, indent=4)
