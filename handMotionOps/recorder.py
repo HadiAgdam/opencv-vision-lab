@@ -26,6 +26,7 @@ duration = 3
 
 gesture: Gesture = None
 start_time: float = None
+r = 150
 
 
 def end():
@@ -54,8 +55,8 @@ if __name__ == "__main__":
                         gesture = g
                     cx5, cy5 = int(
                         hand_landmarks.landmark[5].x * w), int(hand_landmarks.landmark[5].y * h)
-                    cv2.circle(img, (cx5, cy5), 200, (255, 255, 255), 20)
-                    cv2.ellipse(img, (cx5, cy5), (200, 200), 0, -90, -
+                    cv2.circle(img, (cx5, cy5), r, (255, 255, 255), 20)
+                    cv2.ellipse(img, (cx5, cy5), (r, r), 0, -90, -
                                 90 + (time() - start_time) * (360/duration), (0, 80, 0), 20)
         else:
             start_time = None
