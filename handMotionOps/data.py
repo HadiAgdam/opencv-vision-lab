@@ -10,13 +10,18 @@ def save(gesture: Gesture, command: Command):
     # open json file that we save our data in it
 
     with open("data/data.json", 'r') as f:
-        data_list = loads(f.read)
+        data_list = loads(f.read())
 
-    data_list = [item for item in data_list if not (get_gesture(item["gesture"]) == gesture and Command(item["command"]) != command)]
+    data_list = [item for item in data_list if not (get_gesture(
+        item["gesture"]) == gesture and Command(item["command"]) != command)]
+    for idx, ges in enumerate(data_list):
+        if ges["gesture"] == gesture.to_string():
+            data_list.pop(idx)
+        
 
     data_list.append({
-        "gesture": gesture.to_string(),
+        "gesture": gesture.to_string(), "command": command.text
     })
 
     with open("data/data.json", "w") as f:
-        dumps(data_list, f, indent=4)
+        f.write(dumps(data_list))

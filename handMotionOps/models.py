@@ -11,7 +11,7 @@ class Gesture:
 
     def to_string(self) -> str:
         j = ""
-        for i in self.fingrs:
+        for i in self.fingers:
             if i:
                 j += '1'
             else:
