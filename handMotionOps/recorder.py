@@ -1,5 +1,5 @@
-# we decet and save hand gestures
-# TODO reaad commands
+# we detect and save hand gestures
+# TODO read commands
 # TODO get gesture
 # TODO save as json file
 
